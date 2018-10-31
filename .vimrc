@@ -14,6 +14,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug', {'dir': '~/.vim/plugged/vim-plug/autoload'}
+Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bronson/vim-trailing-whitespace'
@@ -23,9 +24,18 @@ Plug 'terryma/vim-expand-region'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-eunuch'
 Plug 'mattn/emmet-vim'
-Plug 'airblade/vim-gitgutter'
 
 call plug#end()
+
+
+"----------------------------------------------------
+" color scheme
+"----------------------------------------------------
+colorscheme gruvbox
+set background=dark
+set t_Co=256            " gruvboxをカラースキーマにするときに必要！
+let g:ligthline = { 'colorscheme': 'gruvbox' }
+
 
 "----------------------------------------------------
 " keymap
